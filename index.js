@@ -2,18 +2,21 @@
 const express = require("express");
 const { generateImage } = require("./service/generateImage");
 const path = require("path");
+const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config();
 const app = express();
 app.set("view engine", "ejs");
 app.set();
+cors();
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/image", async (req, res) => {
   let { url, token, height, width } = req.body;
+  console.log(url);
   // if (token !== process.env.TOKEN) {
   //   return res.status(401).json({ message: "Unauthorized" });
   // }
