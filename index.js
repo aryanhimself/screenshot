@@ -14,7 +14,7 @@ app.set();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.post("/image", async (req, res) => {
+app.post("/api/image", async (req, res) => {
   let { url, token, height, width } = req.body;
   console.log(url);
   // if (token !== process.env.TOKEN) {
