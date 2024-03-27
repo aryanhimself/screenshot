@@ -7,9 +7,9 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 const app = express();
+app.use(cors());
 app.set("view engine", "ejs");
 app.set();
-cors();
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
