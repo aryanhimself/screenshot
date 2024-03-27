@@ -1,8 +1,12 @@
 {
-  "name": "test",
+  "name": "og-generator",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Aryan Phuyal",
+    "email": "phuyalrn2@gmail.com"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.ts"
