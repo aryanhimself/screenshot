@@ -15,7 +15,7 @@ exports.generateImage = (url, width, height) => {
       await page.goto(url, {
         waitUntil: "networkidle0",
       });
-      const image = await page.screenshot({ type: "png" });
+      const image = await page.screenshot({ type: "jpeg" });
       await browser.close();
       resolve(image);
     } catch (err) {
