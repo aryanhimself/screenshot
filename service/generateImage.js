@@ -8,6 +8,8 @@ exports.generateImage = (url, width, height) => {
       const browser = await puppeteer.launch({
         headless: true,
         args: ["--no-sandbox"],
+        ignoreDefaultArgs: ["--disable-extensions"],
+        args: ["--enable-gpu"],
       });
 
       const page = await browser.newPage();
