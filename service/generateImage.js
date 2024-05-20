@@ -6,7 +6,7 @@ exports.generateImage = async (url, width, height) => {
   try {
     const browser = await puppeteer.launch({
       headless: true,
-      args: ["--no-sandbox", "--enable-gpu"],
+      args: ["--no-sandbox", "--enable-gpu",'--disable-setuid-sandbox'],
       ignoreDefaultArgs: ["--disable-extensions"],
     });
 
