@@ -10,10 +10,13 @@ const app = express();
 app.use(cors());
 app.set("view engine", "ejs");
 app.set();
+process.setMaxListeners(0);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
-app.get("/api/status",(req,res)=>{res.send("Active")})
+app.get("/api/status", (req, res) => {
+  res.send("Active");
+});
 app.post("/api/image", async (req, res) => {
   let { url, token, height, width } = req.body;
   console.log(url);
