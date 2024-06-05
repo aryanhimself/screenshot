@@ -32,7 +32,7 @@ app.post("/api/image", async (req, res) => {
     `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
   );
 
-  res.end(await generateImage(url, width, height));
+  res.end(await generateImage(url, width, height, res));
 });
 
 app.listen(process.env.PORT, () => {
